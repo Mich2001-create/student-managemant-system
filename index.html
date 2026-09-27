@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="container nav">
+    <h1>Student Information System</h1>
+    <nav><a href="#dashboard">Dashboard</a>
+        <a href="#student-form">Add Student</a>
+        <a href="#students">Students</a>
+    </nav>
+</div>
+</header>
+<main class="container" id="dashboard">
+<section class="hero">
+    <div>
+        <p class="eyebrow">Student Management</p>
+        <h2>Manage student information easily</h2>
+        <p>Register, view, update and delete student records.</p>
+    </div>
+    <button class="primary" id="addStudentBtn">+ Add Student</button>
+</section>
+<section class="stats">
+    <div>
+        <span>Total Students</span>
+        <strong id="totalStudents">0</strong>
+    </div>
+    <div>
+        <span>Male Students</span>
+        <strong id="maleStudents">0</strong>
+    </div>
+    <div>
+        <span>Female Students</span>
+        <strong id="femaleStudents">0</strong>
+    </div>
+</section>
+<section class="card" id="student-form">
+    <div class="heading">
+        <div>
+            <p class="eyebrow">Day 2</p>
+            <h3 id="formTitle">Student Registration Form</h3>
+        </div>
+        <button type="button" class="secondary" id="clearFormBtn">Clear</button>
+    </div>
+<form id="studentForm">
+    <input type="hidden" id="studentId">
+    <div class="grid">
+<label>Full Name *<input id="fullName" required placeholder="Enter full name"></label>
+<label>Registration Number *<input id="registrationNo" required placeholder="e.g. BIT/2026/001"></label>
+<label>Gender *
+    <select id="gender" required>
+        <option value="">Select gender</option>
+        <option>Male</option><option>Female</option></select>
+</label>
+<label>Programme *<input id="programme" required placeholder="e.g. Computer Science"></label>
+<label>Year of Study *
+    <select id="year" required><option value="">Select year</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option></select></label>
+<label>Email *<input type="email" id="email" required placeholder="student@example.com"></label>
+<label>Phone Number<input id="phone" placeholder="07XXXXXXXX"></label>
+<label>Date of Birth<input type="date" id="dateOfBirth"></label>
+</div><div class="actions"><button class="primary" type="submit" id="submitBtn">Save Student</button><button class="secondary" type="button" id="cancelEditBtn" hidden>Cancel Edit</button></div></form></section>
+<section class="card" id="students"><div class="heading"><div><p class="eyebrow">Day 3 & Day 4</p><h3>Students' Records</h3></div><input class="search" id="searchInput" placeholder="Search students..."></div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Registration No.</th><th>Full Name</th><th>Gender</th><th>Programme</th><th>Year</th><th>Email</th><th>Actions</th></tr></thead><tbody id="studentTableBody"></tbody></table></div><div id="emptyState" class="empty">No student records available.</div></section>
+</main><div id="toast" class="toast"></div><footer>Student Information Management System &copy; 2026</footer><script src="script.js"></script>
+</body></n</html>
